@@ -57,12 +57,7 @@ function validateDay()
                 maxDay = 30;
                 break;
             case 2:
-                //Check for leap year
-                if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-                    maxDay = 29;
-                } else {
-                    maxDay = 28;
-                }
+                maxDay=28;
                 break;
             default:
                 maxDay = 31;
