@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Age Verification</h1>
+    <form onsubmit="checkAge(event)">
+    <label>Enter date of birth:</label>
+        <input id="day" type="number" placeholder="Enter Day  (DD)" min="1" max="31" class="invalid" oninput="validateDay(); hasInvalidInputs();"/>
+        <p id="day-error"></p>
+        
+        <input id="month" type="number" placeholder="Enter Month  (MM)" min="1" max="12" class="invalid" oninput="validateMonth();validateDay(); hasInvalidInputs();" />
+        <p id="month-error"></p>
+        
+        <input id="year" type="number" placeholder="Enter Year  (YYYY)" min="0001" class="invalid" oninput="validateYear(); validateMonth();validateDay();hasInvalidInputs();" />
+        <p id="year-error"></p>
+       
+        <button id="go-btn" type="submit" disabled>Go</button>
+</form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
